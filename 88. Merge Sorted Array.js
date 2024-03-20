@@ -1,3 +1,10 @@
+
+//!Can you come up with an algorithm that runs in O(m + n) time?
+
+//*solved by me : OKAY
+
+
+
 /**
  * @param {number[]} nums1
  * @param {number} m
@@ -7,6 +14,7 @@
  */
 var merge = function (nums1, m, nums2, n) {
   //This code runs fine but time complexity is : overall time complexity of your solution is dominated by the sorting operation, which is O((m + n) log(m + n)) Because Sorting nums1 using Array.prototype.sort() takes O((m + n) log(m + n)) time.
+
   // let j=0
   // for(let i=0;i<m+n;i++){
   //     if(i<m){
@@ -16,6 +24,7 @@ var merge = function (nums1, m, nums2, n) {
   //     }
   // }
   // return nums1.sort((a,b)=>a-b)
+
 
   //! Optimisig the code
 
