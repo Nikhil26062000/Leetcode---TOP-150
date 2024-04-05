@@ -24,3 +24,5 @@ var twoSum = function (nums, target) {
     // If no solution is found, return an empty array
     return [];
 };
+
+// just a random comment 
