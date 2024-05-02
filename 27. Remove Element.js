@@ -7,7 +7,7 @@
  * @return {number}
  */
 var removeElement = function (nums, val) {
-    let c=0;
+    let c=0;// act as index to overwrite the nums value
     for(let i=0;i<nums.length;i++){
         if(nums[i]!=val){
           nums[c++]=nums[i]
