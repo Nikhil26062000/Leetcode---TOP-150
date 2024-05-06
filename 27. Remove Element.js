@@ -1,4 +1,24 @@
 
+
+// ----------- 3rd Attempt ----------------------
+/**
+ * @param {number[]} nums
+ * @param {number} val
+ * @return {number}
+ */
+var removeElement = function(nums, val) {
+    let c = 0;
+    for(let i =0;i<nums.length;i++){
+        if(nums[i]==val){
+            continue
+        }else{
+            nums[c++]=nums[i]
+        }
+    }
+    return c
+};
+
+
 // --------------------- 2nd Attempt ----------------------------
 
 /**
