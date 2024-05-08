@@ -1,4 +1,27 @@
 
+// ---------------------------------- 2nd Attempt ------------------------------
+
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+var majorityElement = function(nums) {
+    let finalResult ;
+    let count = 0;
+
+    for(let num of nums){
+        if(count === 0){
+            finalResult = num
+        }
+        count += num === finalResult ? 1 : -1 // here we are balancing the two different number's frequency . on each step we are checking that if the number is previous one then we will add 1 to count and if it is different will substract 1 to count . in this way at the end we will either get count as very big let say 5,10,20 etc or we will get count as 1 because suppose if the count is getting + and - till 2nd last element and at 2nd last element we have count = 0 then in last element we will have count as 1 and that element will be assigned as finalresult .
+    }
+    return finalResult
+};
+
+
+
+// -------------------------------- 1st Attempt ---------------------
+
 //!Follow-up: Could you solve the problem in linear time and in O(1) space?
 
 /**
@@ -20,7 +43,7 @@ var majorityElement = function(nums) {
     //     }
     // }
 
-    //? above solution is mine and correct but this is not followinf this codition ---> Follow-up: Could you solve the problem in linear time and in O(1) space?
+    //? above solution is mine and correct but this is not following this codition ---> Follow-up: Could you solve the problem in linear time and in O(1) space?
 
     //!To solve the problem in linear time and O(1) space, you can use a variation of the Boyer-Moore Voting Algorithm.--> by chatgpt
 
