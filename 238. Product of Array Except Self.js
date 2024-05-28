@@ -1,3 +1,41 @@
+
+
+// ------------------------ 2nd Attempt ------------------------------------------------------------------
+
+/**
+ * @param {number[]} nums
+ * @return {number[]}
+ */
+var productExceptSelf = function(nums) {
+    let res =new Array(nums.length).fill(1)
+    
+    // LP : [1,1,2,6]
+    //RP :  [24,12,4,1]
+    //LP=res: []  will be the final output
+
+
+    // finding the leftProduct
+    let LP = 1
+    for(let i=0;i<nums.length;i++){
+        res[i] *= LP //[1,1,2,6]
+        LP = LP*nums[i]
+    }
+
+    //finding the right product
+    let rp = 1
+    for(let i=nums.length-1;i>=0;i--){
+        res[i]*=rp //[24,12,8,6]
+        rp*=nums[i]
+    }
+    return res
+};
+
+
+
+
+
+// -------------------- 1st Attempt ----------------------------------------------------
+
 /**
  * @param {number[]} nums
  * @return {number[]}
