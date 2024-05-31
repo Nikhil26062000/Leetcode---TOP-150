@@ -1,3 +1,66 @@
+
+
+// ----------------2nd Attempt --------------------
+
+/**
+ * @param {number[]} gas
+ * @param {number[]} cost
+ * @return {number}
+ */
+
+// Solution 1st
+var canCompleteCircuit = function (gas, cost) {
+    let currentFuel = 0;
+    let count = 0;
+    let start = 0;
+    for (let i=0;i<gas.length*2;i++){
+        currentFuel = currentFuel + gas[i % gas.length] - cost[i % gas.length]
+        if(currentFuel < 0){
+            currentFuel = 0;
+            start = i + 1;
+            count = 0; 
+        }else{
+            count++;
+        }
+        if(count == gas.length) return start
+    }
+    return -1
+};
+
+
+// Solution 2nd
+var canCompleteCircuit = function (gas, cost) {
+    let availableGas = 0;
+  let totalGas = 0;
+  let startStation = 0;
+
+  for (let i = 0; i < gas.length; i++) {
+      availableGas += gas[i] - cost[i];  
+      // 0 -->  0 + (-2) = -2 ==> 0
+      // 1 --> 0 + (2-4) = -2 ==> 0
+      // 2 --> 0 + (-2) =  -2 ==> 0
+      // 3 --> 0 + (3)  =   3 ==> 3
+      // 4 --> 3 + (3) =    6 ==> 6
+      totalGas += gas[i] - cost[i];
+      // 0 --> 0 + (-2) = -2 
+      // 1 --> -2 + (-2) = -4
+      // 2 --> -4 + (-2) = -6
+      // 3 --> -6 + (3)  = -3
+      // 4 --> -3 + (3)  =  0
+      if (availableGas < 0) {
+          // If availableGas becomes negative, reset it and update startStation to the next station.
+          availableGas = 0;
+          startStation = i + 1;
+      }
+  }
+
+  return totalGas >= 0 ? startStation : -1;
+
+};
+
+
+// ------------------- 1st Attempt ---------------
+
 /**
  * @param {number[]} gas
  * @param {number[]} cost
