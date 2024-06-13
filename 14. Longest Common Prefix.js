@@ -1,4 +1,33 @@
 
+
+//? -------------------------------------------------------------->
+//?        🥰 3rd Attempt : Done by me 🔥
+//? -------------------------------------------------------------->
+
+/**
+ * @param {string[]} strs
+ * @return {string}
+ */
+var longestCommonPrefix = function(strs) {
+    let firstWord = strs[0]
+    let flag=true
+    let res=""
+    for(let i=0;i<firstWord.length;i++){
+        for(let j=1;j<strs.length;j++){
+            if(firstWord[i]==strs[j][i]){
+                continue
+            }else{
+                flag=false
+                return res;
+            }
+        }
+        if(flag==true){
+            res = res + firstWord[i];
+        }
+    }
+    return res
+};
+
 //? ------------------------------------------------------------->
 //?      👌  2nd Attempt 🥰
 //? ------------------------------------------------------------->
