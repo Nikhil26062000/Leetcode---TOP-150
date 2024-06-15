@@ -1,3 +1,35 @@
+
+//? -------------------------------------------------------------------------------->
+//?       😎  2nd Attempt : Done by me 😜
+//? -------------------------------------------------------------------------------->
+
+
+/**
+ * @param {string} s
+ * @return {string}
+ */
+var reverseWords = function(s) {
+    s = s.trim();
+    s = s.split(" ")
+    let res = []
+    for(let i=s.length-1;i>=0;i--){
+        if(s[i]==""){
+            continue
+        }else{
+            res.push(s[i])
+        }
+    }
+    return res.join(" ")
+};
+
+
+
+
+
+//? ----------------------------------------------->
+//?    💖 1st Attempt 🔥
+//? ----------------------------------------------->
+
 /**
  * Function to reverse the words in a string.
  * @param {string} s - Input string.
