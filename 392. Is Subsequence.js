@@ -1,3 +1,33 @@
+
+
+// ------------------------------------------------------------------>
+//   🤞 2nd Attempt 😎
+// ------------------------------------------------------------------>
+
+/**
+ * @param {string} s
+ * @param {string} t
+ * @return {boolean}
+ */
+var isSubsequence = function (s, t) {
+
+    let left = 0;
+    let right = 0;
+    while (left < s.length && right < t.length) {
+        if (s[left] === t[right]) {
+            left++;
+        }
+        right++
+    }
+    return left === s.length
+
+};
+
+
+// ----------------------------------------------------------------->
+//     🔥 1st Attempt ✌️
+// ----------------------------------------------------------------->
+
 /**
  * @param {string} s
  * @param {string} t
