@@ -1,7 +1,7 @@
 
 
 // --------------------------------------------------------------------->
-//      3rd Attempt
+//     👌 3rd Attempt : Done by me 😁
 // --------------------------------------------------------------------->
 
 /**
@@ -10,17 +10,17 @@
  * @return {boolean}
  */
 var isSubsequence = function (s, t) {
-
-    let left = 0;
-    let right = 0;
-    while (left < s.length && right < t.length) {
-        if (s[left] === t[right]) {
-            left++;
+    let ptr1 = 0;
+    let ptr2 = 0;
+    while(ptr2 <t.length){
+        if(s[ptr1]==t[ptr2]){
+            ptr1++;
+            ptr2++;
+        }else{
+            ptr2++
         }
-        right++
     }
-    return left === s.length
-
+    return ptr1 === s.length
 };
 
 // ------------------------------------------------------------------>
