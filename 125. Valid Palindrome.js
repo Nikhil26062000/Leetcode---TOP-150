@@ -1,4 +1,28 @@
 
+// ----------------------------------------------------------------------->
+//    🔥 3rd Attempt : almost done by me but some error in logic 👌
+// ----------------------------------------------------------------------->
+
+/**
+ * @param {string} s
+ * @return {boolean}
+ */
+var isPalindrome = function (s) {
+    let res="";
+    s = s.toLowerCase()
+    for(let i=0;i<s.length;i++){
+        if(s[i]>="a" && s[i]<="z" || s[i]>="0" && s[i]<="9"){
+            res+=s[i]
+        }
+    }
+    return res==res.split("").reverse().join("")
+}
+
+
+
+
+
+
 
 // ---------------------------------------------------------->
 //        ✌️ 2nd Attempt 🔥
