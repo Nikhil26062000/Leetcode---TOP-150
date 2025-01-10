@@ -1,3 +1,8 @@
+
+/**
+ * ! 1st Attempt
+ */
+
 class Solution{
     printTillN(n){
         //code here
