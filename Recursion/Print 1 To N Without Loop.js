@@ -18,3 +18,26 @@ class Solution {
         console.log(buildOutput(n));
     }
 }
+
+/**
+ * 
+ * 2nd Attempt
+ * done by myself
+ * resursion approach
+ * 
+ */
+class Solution {
+    printNos(n) {
+        let arr = []
+        const func = (val,n) =>{
+            if(val>n) return
+            
+            arr.push(val)
+            func(val+1,n)
+        }
+        
+        func(1,n)
+        console.log(arr.join(" "))
+    
+    }
+}
